@@ -1,5 +1,5 @@
 ---
-title: Dissertation Fellowship
+title: Clad
 order: 2
 image: '/assets/images/banners/sterling-nave.jpg'
 caption: The Nave in Sterling Memorial Library.

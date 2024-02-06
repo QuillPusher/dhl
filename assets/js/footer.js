@@ -19,7 +19,7 @@ import moment from 'moment';
 
   window.handleHours = (data) => {
     const dh = data.department.filter((d) => {
-      return d.name === 'Digital Humanities Lab';
+      return d.name === 'Compiler Research';
     })[0];
     const hours = dh.openingHoursSpecification.filter((d) => {
       return d.validFrom === moment().format('YYYY-MM-DD');

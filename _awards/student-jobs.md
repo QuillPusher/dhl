@@ -1,5 +1,5 @@
 ---
-title: Graduate Student Jobs
+title: Vectorized Automatic Differentiation
 order: 3
 image: '/assets/images/banners/sterling-nave.jpg'
 caption: The Nave in Sterling Memorial Library.

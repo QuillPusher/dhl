@@ -1,6 +1,6 @@
 ---
-title: Workshops
-order: 4
+title: Student Success Stories
+order: 3
 layout: resource
 image: '/assets/images/banners/franke-workshop-basu.jpg'
 caption: |

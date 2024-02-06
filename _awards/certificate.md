@@ -1,5 +1,5 @@
 ---
-title: Digital Humanities Certificate
+title: Cling
 order: 1
 image: '/assets/images/banners/sterling-nave.jpg'
 caption: The Nave in Sterling Memorial Library.

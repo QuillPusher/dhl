@@ -1,5 +1,9 @@
-baseurl: ''
-url: http://dhlab.yale.edu
+baseurl: '/dhl/'
+url: quillpusher.github.io
+
+dependencies:
+  - gem: github-pages
+    version: '~> 228'
 
 # render posts with dates in the future
 future: true

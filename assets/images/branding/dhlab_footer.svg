@@ -3,5 +3,5 @@
   <defs>
     <style bx:fonts="Aldrich">@import url(https://fonts.googleapis.com/css2?family=Aldrich%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
   </defs>
-  <text style="fill: rgb(51, 51, 51); font-family: Aldrich; font-size: 22px; white-space: pre;" x="6.001" y="24.217" transform="matrix(1, 0, 0, 1, 0, 1.4210854715202004e-14)">Compiler Research</text>
+  <text style="fill: rgb(255, 251, 251); font-family: Aldrich; font-size: 22px; white-space: pre;" transform="matrix(1, 0, 0, 1, 0, 1.4210854715202004e-14)" x="6.001" y="24.217">Compiler Research</text>
 </svg>

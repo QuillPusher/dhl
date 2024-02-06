@@ -1,6 +1,6 @@
 ---
 spotlight_bottom: true
-title: "Find data for text mining"
+title: "User-Schedulable Languages: Exo and Beyond"
 date: January 20, 2020
 thumbnail: /assets/images/banners/franke-text-mining.jpg
 image: /assets/images/banners/franke-text-mining.jpg
@@ -12,14 +12,10 @@ image_layout: simple
 teaser: |
   Are you tracking a word's semantic change across multiple periodicals over many decades? Or maybe you're looking to perform sentiment analysis or measure changes in word frequency. Yale University Library has made it easier to identify potential datasets for your project.
 ---
-Are you tracking a word's semantic change across multiple periodicals over many decades? Or maybe you're looking to perform sentiment analysis or measure changes in word frequency. Do you know how to find and access the data you need?
 
-Yale University Library added new tags to the Quicksearch catalog that make it easier to identify datasets for text and data mining projects. The format (XML, TIFF, etc.) and quality of the optical character recognition (OCR) varies widely, so we recommend starting with a sample issue once you identify a dataset that might work.
+Single-core performance has long been saturated, and it is critical to exploit the peak performance of heterogeneous accelerators and specialized instructions in many applications. Because compilers are difficult to extend to support diverse and rapidly evolving hardware targets, and automatic optimization is often insufficient to guarantee state-of-the-art performance, high-performance libraries are commonly still coded and optimized by hand, at great expense, in low-level C and assembly. User schedulable languages, or USLs in short, have been proposed to address the challenge by decoupling algorithms and scheduling. In this talk, I will focus on one such USL, Exo, based on the principle of exocompilation: externalizing target-specific code generation support and optimization policies to user-level code. Exo allows custom hardware instructions, specialized memories, and accelerator configuration states to be defined in user libraries. I will also talk about other projects that borrow the idea from USLs and lessons we learned from the industry adoption of Exo.
 
-- To locate newspapers and magazines that the Library licenses for current Yale students, faculty, and staff with an active NetID, add '<a href='https://search.library.yale.edu/catalog?q=yuldsetmediated&search_field=all_fields&commit=Search' target='_blank'>yuldsetmediated</a>' to your search box in Quicksearch. You can then filter by fields such as language, subject region, or subject era to refine your results. To ask a question or arrange access to the data, email [Research Data](mailto:researchdata@yale.edu), and a librarian will follow up. 
+> Yuka Ikarashi is a fourth-year PhD candidate at MIT CSAIL, advised by Jonathan Ragan-Kelley. She is interested in creating compiler systems and programming languages for real-world applications. She is a co-creator of the Exo programming language and has been a developer for other compiler frameworks such as Clang/LLVM and ROOT. She previously worked at Apple, Amazon, and CERN. She received Masason Foundation Fellowship and Funai Foundation Fellowship awards.
 
-- To identify transcripts, recordings, and other linguistic data, try searching with the more general '<a href='https://search.library.yale.edu/catalog?q=yuldsettxt&search_field=all_fields&commit=Search' target='_blank'>yuldsettxt</a>'.
-
-- To find all datasets—including text, geospatial, numeric, and image data—use '<a href='https://search.library.yale.edu/catalog?q=yuldset&search_field=all_fields&commit=Search' target='_blank'>yuldset</a>' 
-
-For more information, visit the <a href='https://guides.library.yale.edu/tdm' target='_blank'>Text and Data Mining research guide</a>.
+#### Next meeting 
+7 Mar 1700

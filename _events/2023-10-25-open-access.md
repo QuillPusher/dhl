@@ -1,5 +1,5 @@
 ---
-title: "Open Access Week: Keynote Presentation"
+title: "Compiler-As-a-Service"
 date: 2023-10-25
 time: 1-2:30 p.m. EDT
 location: Online
@@ -14,26 +14,15 @@ teaser: >
   Join us for our Open Access Week keynote presentation, featuring a conversation between Daniel Dollar (Associate University Librarian for Scholarly Resources, Yale University Library) and Peter Suber (Senior Advisor on Open Access, Harvard Library; Director, Harvard Open Access Project).
 ---
 
-### Overview
-The Digital Humanities Lab and the Scholarly Communication and Information Policy unit at Yale University Library invite you to our Open Access Week keynote presentation. Join Sandra Aya Enimil (Program Director, Scholarly Communication & Information Policy) and Lindsay Barnett (Scholarly Communication Librarian) for a brief interactive session on open access and current library initiatives. Stay for a fireside chat and lively discussion on the current landscape of open access and academic publishing with Peter Suber (Senior Advisor for Open Access, Harvard Library; Director, Harvard Open Access Project) and Daniel Dollar (Associate University Librarian for Scholarly Resources, Yale University Library).  
+### Project Goals
+Incremental compilation aims to support clients that need to keep a single compiler instance active across multiple compile requests. Our work focuses on:
 
-### About the Fireside Chat Speakers
-**Peter Suber** is the Senior Advisor on Open Access, Harvard Library, and Director of the Harvard Open Access Project in the Berkman Klein Center for Internet & Society. By training he's a philosopher and lawyer, and gave up his position as a tenured full professor of philosophy in 2003 to work full-time on open access. He was the principal drafter of the Budapest Open Access Initiative, sits on the boards of many groups devoted to open access and scholarly communication, and has been active in fostering open access for many years through his research, speaking, and writing.  
+- Enhancement – upstream incremental compilation extensions available in forks;
 
-**Daniel Dollar** is the Associate University Librarian for Scholarly Resources at Yale University Library.  
+- Generalization – make building tools using incremental compilation easier;
 
-### Event Details  
-**Date:**  
-Wednesday, October 25, 2023  
+- Sustainability – move incremental use cases upstream.
 
-**Agenda:**  
-***1-1:30 p.m.*** — Interactive session on open access and current library initiatives, led by Sandra Aya Enimil and Lindsay Barnett  
-***1:30-2:30 p.m.*** — Fireside chat and discussion, featuring Peter Suber in conversation with Daniel Dollar  
-  
-**Location:**  
-Online  
+Cling currently requires around 100 patches to clang’s incremental compilation facilities. For example, CodeGen was modified to work with multiple llvm::Module instances, and to finalize per each end-of-translation unit (cling has more than one). Tweaks to the FileManager’s caching mechanism, and improvements to the SourceManager virtual and overridden files (code reached mostly from within cling’s setup) were necessary. Our research shows that the clang infrastructure works amazingly well to support something which was not its main use case. The grand total of our diffs against clang-9 is: 62 files changed, 1294 insertions(+), 231 deletions(-). A major weakness of cling’s infrastructure is that it does not work with the clang Action infrastructure due to the lack of an IncrementalAction. An incremental action should enable the incremental compilation mode in clang (eg., in the preprocessor) and does not terminate at end of the main source file.
 
-### Registration
-All are welcome to attend, though registration is required. To sign up, please visit the <a href='https://schedule.yale.edu/calendar/instruction/keynote' target='_blank'>event registration page</a>.  
-  
-*Be among the first to know when future workshops and events are announced by signing up for the <a href='https://subscribe.yale.edu/browse?search=digital+humanities' target='_blank'>DHLab’s newsletter</a>.*  
+Our Incremental Action allows constant compilation of partial inputs and ensures that the compiler remains active. It includes an API to access attributes of recently compiled chunks of code that can be post-processed.
